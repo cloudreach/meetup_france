@@ -11,8 +11,11 @@ You will have to use packer, all is explained on the documentation or the reposi
 
 
 All information needed about EKS can be found here : https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html
+
 cluster deployment : https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html
+
 worker deployment : https://docs.aws.amazon.com/eks/latest/userguide/worker.html
+
 troubleshooting : https://docs.aws.amazon.com/eks/latest/userguide/troubleshooting.html
 
 
