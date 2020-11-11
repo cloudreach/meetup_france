@@ -1,0 +1,29 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedDeployment
+metadata:
+  name: nginx-meetup
+  namespace: meetup-federated-ns
+spec:
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      replicas: 3
+      selector:
+        matchLabels:
+          app: nginx
+      template:
+        metadata:
+          labels:
+            app: nginx
+        spec:
+          containers:
+          - image: nginx
+            name: nginx
+          ports:
+          - containerPort: 80
+  placement:
+    clusters:
+    - name: meetup-demo-eks
+    - name: meetup-demo-gke

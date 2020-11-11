@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.kubernetes.io/backends: '{"k8s-be-30020--6d7217deaeff10a3":"HEALTHY"}'
+    ingress.kubernetes.io/forwarding-rule: k8s2-fr-7d7h6f0e-meetup-federated-ns-meetup-demo-gke-g6qmgw8d
+    ingress.kubernetes.io/target-proxy: k8s2-tp-7d7h6f0e-meetup-federated-ns-meetup-demo-gke-g6qmgw8d
+    ingress.kubernetes.io/url-map: k8s2-um-7d7h6f0e-meetup-federated-ns-meetup-demo-gke-g6qmgw8d
+  creationTimestamp: "2020-10-27T13:12:44Z"
+  finalizers:
+  - networking.gke.io/ingress-finalizer-V2
+  generation: 1
+  name: meetup-demo-gke
+  namespace: meetup-federated-ns
+  resourceVersion: "273577"
+  selfLink: /apis/extensions/v1beta1/namespaces/meetup-federated-ns/ingresses/meetup-demo-gke
+  uid: 87690976-4003-4959-afa1-af59d3df3b28
+spec:
+  backend:
+    serviceName: svc-nginx
+    servicePort: 80
+status:
+  loadBalancer:
+    ingress:
+    - ip: <GCP Public IP>

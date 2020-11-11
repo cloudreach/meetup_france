@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: meetup-federated-ns
+---
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedNamespace
+metadata:
+  name: meetup-federated-ns
+  namespace: meetup-federated-ns
+spec:
+  placement:
+    clusters:
+    - name: meetup-demo-eks
+    - name: meetup-demo-gke

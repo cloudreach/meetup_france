@@ -1,0 +1,19 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedService
+metadata:
+  name: svc-nginx
+  namespace: meetup-federated-ns
+spec:
+  template:
+    spec:
+      selector:
+        app: nginx
+      type: NodePort
+      ports:
+        - targetPort: 80
+          port: 80
+          nodePort: 30020
+  placement:
+    clusters:
+    - name: meetup-demo-eks
+    - name: meetup-demo-gke

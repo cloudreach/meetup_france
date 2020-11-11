@@ -1,0 +1,9 @@
+variable region {}
+variable aws_profile {}
+variable vpc_name {}
+variable vpc_range {}
+variable cluster_name {}
+variable eks_version {}
+variable instance_type {}
+variable image_id {}
+variable key_pair {}
