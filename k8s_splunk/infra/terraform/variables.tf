@@ -4,8 +4,14 @@ variable region {
   default     = "eu-west-1"
 }
 
+variable vpc_name {
+  description = "Name of the VPC"
+  type        = string
+  default     = "eks-vpc"
+}
+
 variable vpc_cidr {
-  description = "VPC CIDR"
+  description = "CIDR of the VPC"
   type        = string
   default     = "10.0.0.0/16"
 }
@@ -50,12 +56,6 @@ variable eks_master_usernames {
   description = "IAM usernames list to add as system:masters to the aws-auth configmap"
   type        = list(string)
   default     = []
-}
-
-variable signalfx_cluster_name {
-  description = "Name that will be applied as the SignalFx kubernetes-cluster dimension to any metric originating in this cluster, defaults to value of `eks_cluster_name`"
-  default     = ""
-  type        = string
 }
 
 variable signalfx_access_token {

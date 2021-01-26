@@ -14,7 +14,7 @@ This project shows how to deploy a Kubernetes cluster to AWS using EKS (Elastic 
 
 ### Requirements
 
-- [Docker](https://docs.docker.com) to build and run the sample application,
+- [Docker](https://docs.docker.com) to build the sample application,
 
 - [AWS](https://aws.amazon.com) account and [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide) to push the Docker images to AWS ECR (Elastic Container Registry),
 

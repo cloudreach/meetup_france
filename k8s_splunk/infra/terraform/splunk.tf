@@ -6,7 +6,7 @@ resource helm_release signalfx_agent {
   chart            = "signalfx-agent"
   set {
     name  = "clusterName"
-    value = coalesce(var.signalfx_cluster_name, var.eks_cluster_name)
+    value = var.eks_cluster_name
   }
   set {
     name  = "signalFxAccessToken"
